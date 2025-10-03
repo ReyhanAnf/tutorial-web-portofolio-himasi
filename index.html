@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Reguler | Tutorial Koding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            background-image: linear-gradient(to bottom right, #ffffff, #e5e7eb, #d1d5db);
+            background-attachment: fixed;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="glass-panel sticky top-4 mx-4 md:mx-auto md:max-w-6xl rounded-2xl z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-gray-900">Kelas Reguler</h1>
+                <p class="text-gray-600 mt-1">Membangun web portofolio dengan Tailwind CSS dan Github Pages serta Implementasi API</p>
+            </div>
+                    <div class="flex flex-row gap-1">
+          <img
+            src="./ubsi.png"
+            alt="Logo Komunitas"
+            class="h-12 w-12 shadow-md hidden sm:block"
+          />
+          <img
+            src="./himasi.png"
+            alt="Logo Komunitas"
+            class="h-12 w-12 rounded-full shadow-md hidden sm:block"
+          />
+          <img
+            src="./kd.png"
+            alt="Logo Komunitas"
+            class="h-12 w-16 hidden sm:block"
+          />
+        </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <section class="text-center my-12">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-gray-900">Selamat Datang di Workshop Koding!</h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-600">
+                Dalam tutorial ini, kita akan bersama-sama membangun sebuah website portofolio dinamis. Kita akan belajar mulai dari dasar HTML, styling dengan Tailwind CSS, hingga mengambil data dari API untuk menampilkan proyek secara dinamis. Tutorial ini dibagi menjadi 6 hari agar mudah diikuti.
+            </p>
+        </section>
+
+        <section class="mt-16">
+            <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">Materi Pembelajaran</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <a href="hari-1.html" class="block glass-panel p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center gap-4"><div class="bg-teal-100 text-teal-600 p-3 rounded-full"><i data-lucide="book-open-check"></i></div><div><p class="font-semibold text-gray-500">Hari 1</p><h4 class="text-xl font-bold text-gray-900">Struktur & Navbar</h4></div></div>
+                    <p class="mt-4 text-gray-600">Mempersiapkan file, struktur dasar HTML, dan membuat navigasi website yang responsif.</p>
+                </a>
+                <a href="hari-2.html" class="block glass-panel p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center gap-4"><div class="bg-teal-100 text-teal-600 p-3 rounded-full"><i data-lucide="layout-template"></i></div><div><p class="font-semibold text-gray-500">Hari 2</p><h4 class="text-xl font-bold text-gray-900">Hero Section</h4></div></div>
+                    <p class="mt-4 text-gray-600">Mendesain bagian utama yang menarik perhatian pengunjung dengan efek ketikan.</p>
+                </a>
+                <a href="hari-3.html" class="block glass-panel p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center gap-4"><div class="bg-teal-100 text-teal-600 p-3 rounded-full"><i data-lucide="user-round"></i></div><div><p class="font-semibold text-gray-500">Hari 3</p><h4 class="text-xl font-bold text-gray-900">Tentang Saya</h4></div></div>
+                    <p class="mt-4 text-gray-600">Membuat bagian untuk memperkenalkan diri dan menampilkan keahlian yang dimiliki.</p>
+                </a>
+                <a href="hari-4.html" class="block glass-panel p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center gap-4"><div class="bg-teal-100 text-teal-600 p-3 rounded-full"><i data-lucide="message-square-plus"></i></div><div><p class="font-semibold text-gray-500">Hari 4</p><h4 class="text-xl font-bold text-gray-900">Formulir Kontak</h4></div></div>
+                    <p class="mt-4 text-gray-600">Membangun formulir kontak yang fungsional dan modern agar pengunjung dapat menghubungi Anda.</p>
+                </a>
+                <a href="hari-5.html" class="block glass-panel p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center gap-4"><div class="bg-teal-100 text-teal-600 p-3 rounded-full"><i data-lucide="database-zap"></i></div><div><p class="font-semibold text-gray-500">Hari 5</p><h4 class="text-xl font-bold text-gray-900">Proyek Dinamis (API)</h4></div></div>
+                    <p class="mt-4 text-gray-600">Menampilkan daftar proyek secara dinamis dengan mengambil data dari sebuah API menggunakan JavaScript.</p>
+                </a>
+                <a href="hari-6.html" class="block glass-panel p-8 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex items-center gap-4"><div class="bg-teal-100 text-teal-600 p-3 rounded-full"><i data-lucide="toy-brick"></i></div><div><p class="font-semibold text-gray-500">Hari 6</p><h4 class="text-xl font-bold text-gray-900">Footer & Finalisasi</h4></div></div>
+                    <p class="mt-4 text-gray-600">Menyelesaikan website dengan footer dan menambahkan interaktivitas akhir dengan JavaScript.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 mt-12">
+        <p class="text-gray-500">Dibuat untuk Komunitas | &copy; 2025</p>
+    </footer>
+    
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
