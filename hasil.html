@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Interaktif | Ahmad Zaelani</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      /* Menggunakan font Inter sebagai default */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Style untuk active link di navbar */
+      .nav-link.active {
+        color: #00b894;
+        font-weight: 600;
+      }
+      /* Style untuk garis bawah pada judul section */
+      .section-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: #00b894;
+        margin: 8px auto 0;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full top-0 bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="#home" class="text-3xl font-bold text-[#00B894]">Ahmad Z.</a>
+        
+        <!-- Menu untuk Desktop -->
+        <ul id="desktop-menu" class="hidden md:flex items-center space-x-8 font-medium">
+          <li><a href="#home" class="nav-link hover:text-[#00B894] transition">Home</a></li>
+          <li><a href="#about" class="nav-link hover:text-[#00B894] transition">Tentang</a></li>
+          <li><a href="#projects" class="nav-link hover:text-[#00B894] transition">Proyek</a></li>
+          <li><a href="#contact" class="nav-link hover:text-[#00B894] transition">Kontak</a></li>
+        </ul>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button id="hamburger-btn" class="md:hidden z-50">
+          <i data-lucide="menu" class="w-7 h-7"></i>
+        </button>
+      </div>
+
+      <!-- Menu untuk Mobile -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white">
+        <ul class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-medium">
+          <li><a href="#home" class="nav-link-mobile hover:text-[#00B894] transition">Home</a></li>
+          <li><a href="#about" class="nav-link-mobile hover:text-[#00B894] transition">Tentang</a></li>
+          <li><a href="#projects" class="nav-link-mobile hover:text-[#00B894] transition">Proyek</a></li>
+          <li><a href="#contact" class="nav-link-mobile hover:text-[#00B894] transition">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-[#00B894] to-green-300 text-white px-6 pt-24 md:pt-0">
+      <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
+          <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+            Halo, Saya <br class="hidden md:block"/> <span class="text-yellow-300">Ahmad Zaelani</span>
+          </h2>
+          <p class="text-lg md:text-2xl mb-8 font-medium">
+            <span id="typing-effect"></span>
+          </p>
+          <a
+            href="#projects"
+            class="inline-block bg-white text-[#00B894] px-8 py-3 rounded-full font-bold shadow-lg hover:scale-105 hover:shadow-2xl transform transition-transform duration-300"
+            >Lihat Portofolio Saya</a
+          >
+        </div>
+        <div class="md:w-1/2 flex justify-center" data-aos="fade-left" data-aos-delay="200">
+          <div class="relative w-72 h-72 md:w-96 md:h-96">
+            <div class="absolute inset-0 bg-white/20 rounded-full blur-2xl"></div>
+            <img
+              src="https://placehold.co/400x400/FFFFFF/00B894?text=AZ"
+              alt="Foto Profil Ahmad Zaelani"
+              class="relative rounded-full shadow-2xl border-8 border-white/50 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section id="about" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up">
+          Tentang Saya
+        </h3>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="zoom-in-right">
+            <img
+              src="https://placehold.co/600x450/00B894/FFFFFF?text=Coding"
+              alt="Gambar tentang Ahmad Zaelani"
+              class="rounded-2xl shadow-xl w-full h-auto"
+            />
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <p class="text-lg leading-relaxed mb-6 text-gray-600">
+              Saya adalah seorang pengembang web & mobile dengan hasrat untuk menciptakan aplikasi yang modern, responsif, dan fungsional. Saya percaya bahwa teknologi dapat memecahkan masalah nyata dan saya selalu antusias untuk belajar hal baru.
+            </p>
+            <p class="text-lg leading-relaxed mb-8 text-gray-600">
+              Dengan pengalaman dalam berbagai tumpukan teknologi, saya fokus pada penulisan kode yang bersih dan efisien untuk memberikan pengalaman pengguna terbaik.
+            </p>
+            <h4 class="text-2xl font-semibold mb-4">Keahlian Saya</h4>
+            <div class="flex flex-wrap gap-4">
+              <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-medium flex items-center gap-2"><i data-lucide="figma" class="w-5 h-5 text-pink-500"></i>Figma</span>
+              <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-medium flex items-center gap-2"><i data-lucide="smartphone" class="w-5 h-5 text-blue-500"></i>Flutter</span>
+              <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-medium flex items-center gap-2"><i data-lucide="server" class="w-5 h-5 text-red-500"></i>Laravel</span>
+              <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-medium flex items-center gap-2"><i data-lucide="wind" class="w-5 h-5 text-cyan-500"></i>Tailwind CSS</span>
+              <span class="bg-gray-200 text-gray-700 px-4 py-2 rounded-full font-medium flex items-center gap-2"><i data-lucide="database" class="w-5 h-5 text-orange-500"></i>MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyek Section -->
+    <section id="projects" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up">
+          Proyek Terbaru
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Kartu Proyek 1 -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-left">
+            <div class="relative">
+                <img src="https://placehold.co/400x250/333/FFF?text=Proyek+1" alt="Gambar Proyek 1" class="w-full h-52 object-cover"/>
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <a href="#" class="text-white bg-[#00B894] px-4 py-2 rounded-full font-semibold">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-2xl font-bold mb-2">Sistem E-Learning</h4>
+              <p class="text-gray-600 mb-4">Platform belajar online interaktif dengan manajemen kursus dan pelacakan kemajuan siswa.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full">Flutter</span>
+                <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Laravel</span>
+                <span class="text-sm bg-orange-100 text-orange-700 px-3 py-1 rounded-full">MySQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu Proyek 2 -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-up" data-aos-delay="200">
+            <div class="relative">
+                <img src="https://placehold.co/400x250/555/FFF?text=Proyek+2" alt="Gambar Proyek 2" class="w-full h-52 object-cover"/>
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <a href="#" class="text-white bg-[#00B894] px-4 py-2 rounded-full font-semibold">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-2xl font-bold mb-2">Aplikasi Kasir (POS)</h4>
+              <p class="text-gray-600 mb-4">Aplikasi Point of Sale untuk UMKM dengan manajemen inventaris, penjualan, dan laporan.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-sm bg-green-100 text-green-700 px-3 py-1 rounded-full">Vue.js</span>
+                <span class="text-sm bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full">Tailwind CSS</span>
+                <span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full">Laravel</span>
+              </div>
+            </div>
+          </div>
+          <!-- Kartu Proyek 3 -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-right" data-aos-delay="400">
+            <div class="relative">
+                <img src="https://placehold.co/400x250/777/FFF?text=Proyek+3" alt="Gambar Proyek 3" class="w-full h-52 object-cover"/>
+                <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <a href="#" class="text-white bg-[#00B894] px-4 py-2 rounded-full font-semibold">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-2xl font-bold mb-2">Desain UI/UX Mobile Banking</h4>
+              <p class="text-gray-600 mb-4">Prototipe desain antarmuka aplikasi mobile banking yang modern dan mudah digunakan.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="text-sm bg-pink-100 text-pink-700 px-3 py-1 rounded-full">Figma</span>
+                <span class="text-sm bg-purple-100 text-purple-700 px-3 py-1 rounded-full">UI/UX Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="contact" class="py-24 bg-white">
+      <div class="container mx-auto px-6">
+        <h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up">
+          Hubungi Saya
+        </h3>
+        <div class="max-w-2xl mx-auto bg-gray-50/50 rounded-2xl shadow-lg p-8 md:p-12 border border-gray-100" data-aos="zoom-in">
+          <form class="space-y-6">
+            <div class="relative">
+              <i data-lucide="user" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+              <input type="text" placeholder="Nama Lengkap" class="w-full p-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00B894] outline-none transition"/>
+            </div>
+            <div class="relative">
+              <i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+              <input type="email" placeholder="Alamat Email" class="w-full p-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00B894] outline-none transition"/>
+            </div>
+            <div class="relative">
+              <i data-lucide="message-square" class="absolute left-4 top-6 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+              <textarea placeholder="Pesan Anda" class="w-full p-4 pl-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00B894] outline-none h-40 transition"></textarea>
+            </div>
+            <button class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-[#00B894] to-green-500 text-white py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity duration-300 shadow-lg">
+              Kirim Pesan <i data-lucide="send" class="w-5 h-5"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto py-10 px-6 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+          <a href="#" class="hover:text-[#00B894] transition"><i data-lucide="github" class="w-7 h-7"></i></a>
+          <a href="#" class="hover:text-[#00B894] transition"><i data-lucide="linkedin" class="w-7 h-7"></i></a>
+          <a href="#" class="hover:text-[#00B894] transition"><i data-lucide="instagram" class="w-7 h-7"></i></a>
+        </div>
+        <p>&copy; 2025 Ahmad Zaelani. Dibuat dengan ❤️ dan Tailwind CSS.</p>
+      </div>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+      // Inisialisasi AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+
+      // Inisialisasi Lucide Icons
+      lucide.createIcons();
+      
+      // -- Efek Mengetik --
+      const typingElement = document.getElementById('typing-effect');
+      const roles = ["Web & Mobile Developer", "UI/UX Enthusiast", "Tech Explorer"];
+      let roleIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+
+      function type() {
+        const currentRole = roles[roleIndex];
+        let displayText = '';
+
+        if (isDeleting) {
+          displayText = currentRole.substring(0, charIndex - 1);
+          charIndex--;
+        } else {
+          displayText = currentRole.substring(0, charIndex + 1);
+          charIndex++;
+        }
+
+        typingElement.textContent = displayText;
+        typingElement.style.borderRight = '3px solid #FFD700'; // Cursor
+
+        let typeSpeed = 200;
+        if (isDeleting) {
+          typeSpeed /= 2;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+          typeSpeed = 2000; // Jeda setelah selesai mengetik
+          isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          typeSpeed = 500; // Jeda sebelum mulai mengetik kata baru
+        }
+        
+        setTimeout(type, typeSpeed);
+      }
+
+      // -- Navbar & Menu Mobile --
+      const navbar = document.getElementById('navbar');
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
+      const sections = document.querySelectorAll('section');
+      
+      // Toggle Menu Mobile
+      hamburgerBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if(isHidden) {
+          mobileMenu.classList.remove('hidden');
+          hamburgerBtn.innerHTML = '<i data-lucide="x" class="w-7 h-7"></i>';
+        } else {
+          mobileMenu.classList.add('hidden');
+          hamburgerBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+        }
+        lucide.createIcons(); // Re-render icon
+      });
+
+      // Tutup menu saat link di-klik (untuk mobile)
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          hamburgerBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
+          lucide.createIcons();
+        });
+      });
+
+      // Efek shadow pada navbar saat scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('shadow-md');
+          navbar.classList.remove('shadow-sm');
+        } else {
+          navbar.classList.remove('shadow-md');
+          navbar.classList.add('shadow-sm');
+        }
+
+        // Active link highlighting on scroll
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href').substring(1) === current) {
+            link.classList.add('active');
+          }
+        });
+      });
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        type();
+      });
+    </script>
+  </body>
+</html>
