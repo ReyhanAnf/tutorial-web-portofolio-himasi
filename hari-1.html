@@ -72,7 +72,7 @@
                     <h1 class="text-4xl font-extrabold text-gray-900">Hari 1: Struktur Dasar & Navbar</h1>
                     <p class="text-lg text-gray-700">Selamat datang di hari pertama! Hari ini kita akan menyiapkan fondasi website kita. Kita akan membuat struktur dasar file HTML dan membangun sebuah navbar yang keren dan responsif.</p>
                     
-                    <h2>Langkah 1: Struktur Dasar HTML</h2>
+                    <h2 class="text-md font-bold my-10">Langkah 1: Struktur Dasar HTML</h2>
                     <p>Pertama, buat file baru bernama <code>index.html</code>. Kemudian, salin dan tempelkan kode di bawah ini. Ini adalah "kerangka" dari setiap halaman web.</p>
                     <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="id" class="scroll-smooth"&gt;
@@ -100,7 +100,7 @@
                         <li><strong><code>&lt;body&gt;</code></strong>: Di sinilah semua konten yang terlihat oleh pengguna akan ditempatkan.</li>
                     </ul>
 
-                    <h2>Langkah 2: Membuat Navbar</h2>
+                    <h2 class="text-md font-bold my-10">Langkah 2: Membuat Navbar</h2>
                     <p>Navbar adalah menu navigasi di bagian atas website. Kita akan membuatnya tetap di atas saat halaman di-scroll dan responsif untuk tampilan mobile.</p>
                     <pre class="language-html"><code>&lt;!-- Navbar --&gt;
 &lt;nav id="navbar" class="fixed w-full top-0 bg-white/80 backdrop-blur-md shadow-sm z-50"&gt;
@@ -128,7 +128,28 @@
   &lt;/div&gt;
 &lt;/nav&gt;
 </code></pre>
-                    <pre class="language-javascript">
+
+<h2 class="text-md font-bold my-10">Langkah 3: Membuat Interaksi Menggunakan JavaScript</h2>
+<p>
+  JavaScript adalah bahasa pemrograman yang memungkinkan kita membuat halaman web dan aplikasi menjadi interaktif dan dinamis, bukan hanya menampilkan konten statis
+</p>
+
+<h3 class="text-md my-10">Tambahkan Tag Script Diatas penutup tag body</h3>
+
+<pre class="language-html">
+<code>
+  &lt;script&gt;
+    // &lt;!-- Tempat menyimpan kode JavaScript --&gt;
+  &lt;/script&gt;
+
+  &lt;!-- Nah posisinya di atas ini --&gt;
+  &lt;/body&gt; &lt;!-- Yang Ini jangan di copy --&gt;
+</code>
+</pre>
+
+<h3 class="text-md my-10">Tambahkan Kode untuk responsif Navbar</h3>
+
+<pre class="language-javascript">
 <code>
   // -- Navbar & Menu Mobile --
   const navbar = document.getElementById('navbar');

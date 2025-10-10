@@ -70,12 +70,12 @@
                     <h1 class="text-4xl font-extrabold text-gray-900">Hari 2: Membuat Hero Section yang Menarik</h1>
                     <p class="text-lg text-gray-700">Hari ini kita akan fokus membuat bagian pertama yang dilihat pengunjung, yaitu "Hero Section". Bagian ini harus bisa langsung menarik perhatian dengan perkenalan singkat, foto, dan efek ketikan yang dinamis.</p>
 
-                    <h2>Langkah 1: Struktur HTML untuk Hero Section</h2>
+                    <h2 class="text-md font-bold my-8">Langkah 1: Struktur HTML untuk Hero Section</h2>
                     <p>Tambahkan kode berikut di dalam tag <code>&lt;body&gt;</code>, tepat setelah tag <code>&lt;nav&gt;</code>. Ini akan menjadi wadah utama untuk konten hero section kita.</p>
                     <pre class="language-html"><code>&lt;!-- Hero Section --&gt;
 &lt;section id="home" class="min-h-screen flex items-center bg-gray-100/50 pt-24 md:pt-0"&gt;
   &lt;div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6"&gt;
-    &lt;!-- Teks & Tombol --&gt;
+    &lt;!-- Teks Nama --&gt;
     &lt;div class="md:w-1/2 text-center md:text-left"&gt;
       &lt;h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-gray-900"&gt;
         Halo, Saya &lt;br class="hidden md:block"/&gt; &lt;span class="text-teal-600"&gt;Ahmad Zaelani&lt;/span&gt;
@@ -91,7 +91,8 @@
     &lt;div class="md:w-1/2 flex justify-center"&gt;
       &lt;div class="relative w-72 h-72 md:w-96 md:h-96"&gt;
         &lt;div class="absolute inset-0 bg-teal-200 rounded-full blur-2xl opacity-50"&gt;&lt;/div&gt;
-        &lt;img src="https://placehold.co/400x400/FFFFFF/00b894?text=AZ" alt="Foto Profil" class="relative rounded-full shadow-2xl border-8 border-white w-full h-full object-cover"/&gt;
+        &lt;!-- Ubah link nya menjadi gambar kalian atau ubah hurufnya menjadi yang lain --&gt;
+        &lt;img src="https://placehold.co/400x400/FFFFFF/00b894?text=RN" alt="Foto Profil" class="relative rounded-full shadow-2xl border-8 border-white w-full h-full object-cover"/&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
@@ -99,18 +100,77 @@
 </code></pre>
 
                     <h3>Penjelasan Kelas Tailwind CSS:</h3>
-                    <ul>
-                        <li><strong><code>min-h-screen flex items-center</code></strong>: Membuat section memenuhi tinggi layar dan menengahkan konten secara vertikal.</li>
-                        <li><strong><code>pt-24 md:pt-0</code></strong>: Memberi padding atas di mobile agar konten tidak tertutup navbar, dan menghapusnya di desktop.</li>
-                        <li><strong><code>flex-col-reverse md:flex-row</code></strong>: Di mobile, gambar akan di atas teks. Di desktop, teks akan di kiri dan gambar di kanan.</li>
-                        <li><strong><code>font-extrabold</code>, <code>leading-tight</code></strong>: Memberi penekanan visual pada judul utama.</li>
-                        <li><strong><code>relative</code> & <code>absolute</code></strong>: Digunakan pada gambar untuk menciptakan efek latar belakang blur yang estetik.</li>
-                        <li><strong><code>rounded-full shadow-2xl border-8</code></strong>: Membuat gambar menjadi bulat sempurna dengan bayangan tebal dan bingkai putih.</li>
-                    </ul>
+                    <table class="table-auto border-collapse border border-gray-300 w-full text-left">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="border border-gray-300 px-4 py-2 w-1/3">Kelas Tailwind</th>
+                                <th class="border border-gray-300 px-4 py-2">Fungsi / Deskripsi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <code>min-h-screen flex items-center</code>
+                                </td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    Membuat section memenuhi tinggi layar dan menengahkan konten secara vertikal.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <code>pt-24 md:pt-0</code>
+                                </td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    Memberi padding atas di mobile agar konten tidak tertutup navbar, dan menghapusnya di desktop.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <code>flex-col-reverse md:flex-row</code>
+                                </td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    Di mobile, gambar akan di atas teks. Di desktop, teks akan di kiri dan gambar di kanan.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <code>font-extrabold</code>, <code>leading-tight</code>
+                                </td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    Memberi penekanan visual pada judul utama.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <code>relative</code> & <code>absolute</code>
+                                </td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    Digunakan pada gambar untuk menciptakan efek latar belakang blur yang estetik.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    <code>rounded-full shadow-2xl border-8</code>
+                                </td>
+                                <td class="border border-gray-300 px-4 py-2">
+                                    Membuat gambar menjadi bulat sempurna dengan bayangan tebal dan bingkai putih.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <h2>Langkah 2: Menambahkan Efek Ketikan dengan JavaScript</h2>
-                    <p>Agar lebih hidup, kita akan menambahkan efek seolah-olah teks sedang diketik. Tambahkan kode JavaScript ini di dalam tag <code>&lt;script&gt;</code> di bagian bawah file HTML Anda, sebelum penutup <code>&lt;/body&gt;</code>.</p>
-                    <pre class="language-javascript"><code>// -- Efek Mengetik --
+                    <h2 class="text-md font-bold my-10">Langkah 2: Menambahkan Efek Ketikan dengan JavaScript</h2>
+                    <p>Agar lebih hidup, kita akan menambahkan efek seolah-olah teks sedang diketik. Tambahkan kode JavaScript ini di dalam tag <code>&lt;script&gt;</code> di bagian bawah file HTML Anda, simpan dibawah kode JavaScript pertemuan pertama.</p>
+<pre class="language-javascript">
+<code>
+window.addEventListener("scroll", () => {
+// ISI PERTEMUAN Pertama
+});
+
+// DISINI TEMPAT UNTUK KODE SCRIPT PERTEMUAN 2
+</code>
+</pre>
+<pre class="language-javascript"><code>// -- Efek Mengetik --
 const typingElement = document.getElementById('typing-effect');
 const roles = ["Web & Mobile Developer", "UI/UX Enthusiast", "Tech Explorer"];
 let roleIndex = 0;
@@ -155,6 +215,84 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 </code></pre>
                     <p>Setelah menambahkan kedua bagian kode di atas, simpan file Anda dan buka di browser. Sekarang Anda seharusnya melihat hero section yang menarik dengan efek ketikan yang dinamis!</p>
+<table cellpadding="8" cellspacing="0" class="table-auto border-collapse border border-gray-300 w-full text-left">
+  <thead style="background: #f3f4f6;">
+    <tr>
+      <th class="border border-gray-300 px-4 py-2 w-1/3">Kode / Bagian</th>
+      <th class="border border-gray-300 px-4 py-2 w-1/3">Penjelasan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>window.addEventListener("scroll", () => {...});</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Menjalankan fungsi setiap kali pengguna melakukan scroll pada halaman (masih kosong di sini).</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>const typingElement = document.getElementById('typing-effect');</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Mengambil elemen HTML dengan ID <code>typing-effect</code> sebagai tempat menampilkan teks efek mengetik.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>const roles = ["Web & Mobile Developer", "UI/UX Enthusiast", "Tech Explorer"];</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Array teks yang akan diketik dan dihapus secara bergantian.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>let roleIndex = 0;</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Posisi teks aktif dalam array <code>roles</code>.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>let charIndex = 0;</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Posisi huruf yang sedang diketik atau dihapus.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>let isDeleting = false;</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Menandakan apakah sedang mengetik (<code>false</code>) atau menghapus (<code>true</code>).</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>const currentRole = roles[roleIndex];</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Mengambil teks aktif dari array.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>if (isDeleting)</code> ... <code>else</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Mengatur apakah efek sedang menambah huruf atau menghapus huruf.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>typingElement.textContent = displayText;</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Menampilkan hasil teks ke elemen HTML.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>typingElement.style.borderRight = '3px solid #0d9488';</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Menambahkan efek garis vertikal (kursor) seperti mesin ketik.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>let typeSpeed = 200;</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Menentukan kecepatan mengetik (200 milidetik per karakter).</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>if (isDeleting) typeSpeed /= 2;</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Jika sedang menghapus, kecepatannya dipercepat dua kali lipat.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>if (!isDeleting && charIndex === currentRole.length)</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Saat teks selesai diketik penuh, tunggu 2 detik sebelum mulai menghapus.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>else if (isDeleting && charIndex === 0)</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Saat penghapusan selesai, ganti ke teks berikutnya dari array.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>setTimeout(type, typeSpeed);</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Memanggil kembali fungsi <code>type()</code> dengan jeda tertentu untuk membuat animasi berulang.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>document.addEventListener('DOMContentLoaded', ...)</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Menjalankan efek mengetik setelah seluruh halaman selesai dimuat.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2 w-1/3"><code>if (typingElement) { type(); }</code></td>
+      <td class="border border-gray-300 px-4 py-2 w-1/3">Memulai animasi mengetik jika elemen dengan ID <code>typing-effect</code> ditemukan.</td>
+    </tr>
+  </tbody>
+</table>
 
                 </article>
             </div>
@@ -166,14 +304,12 @@ document.addEventListener('DOMContentLoaded', () => {
     <script>
         lucide.createIcons();
       
-        // Sidebar Toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const sidebar = document.getElementById('sidebar');
         mobileMenuBtn.addEventListener('click', () => {
             sidebar.classList.toggle('-translate-x-full');
         });
 
-        // Fungsi untuk menambah tombol salin
         function addCopyButtons() {
             const codeBlocks = document.querySelectorAll('pre[class*="language-"]');
             codeBlocks.forEach(block => {
@@ -201,7 +337,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('DOMContentLoaded', () => {
             addCopyButtons();
             
-            // Efek Mengetik
             const typingElement = document.getElementById('typing-effect');
             if(typingElement) {
                 const roles = ["Web & Mobile Developer", "UI/UX Enthusiast", "Tech Explorer"];

@@ -68,7 +68,7 @@
                     <h1 class="text-4xl font-extrabold text-gray-900">Hari 6: Sentuhan Akhir dengan Footer & JavaScript</h1>
                     <p class="text-lg text-gray-700">Selamat datang di hari terakhir! Kita akan menyelesaikan website kita dengan menambahkan footer, ikon sosial media, dan menggabungkan semua fungsi JavaScript yang diperlukan untuk interaktivitas.</p>
                     
-                    <h2>Langkah 1: Membuat Footer</h2>
+                    <h2 class="text-md font-bold my-10">Langkah 1: Membuat Footer</h2>
                     <p>Footer adalah bagian paling bawah dari website, biasanya berisi info hak cipta dan link sosial media. Tambahkan kode ini sebelum tag penutup <code>&lt;/body&gt;</code>.</p>
                     <pre class="language-html"><code>&lt;!-- Footer --&gt;
 &lt;footer class="bg-gray-800 text-white"&gt;
@@ -83,14 +83,32 @@
 &lt;/footer&gt;
 </code></pre>
                     <h3>Penjelasan Kelas Tailwind CSS:</h3>
-                    <ul>
-                        <li><strong><code>bg-gray-800 text-white</code></strong>: Memberi latar belakang gelap dan teks putih pada footer untuk kontras.</li>
-                        <li><strong><code>flex justify-center space-x-6</code></strong>: Menengahkan ikon sosial media dan memberi jarak di antara mereka.</li>
-                        <li><strong><code>hover:text-teal-400 transition</code></strong>: Mengubah warna ikon menjadi teal saat kursor diarahkan ke ikon, dengan efek transisi yang mulus.</li>
-                    </ul>
+<table class="min-w-full mt-6 border border-gray-200 rounded-xl overflow-hidden text-sm text-gray-700">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="py-3 px-4 text-left font-semibold text-gray-900">Kelas / Properti</th>
+      <th class="py-3 px-4 text-left font-semibold text-gray-900">Penjelasan</th>
+    </tr>
+  </thead>
+  <tbody class="divide-y divide-gray-200">
+    <tr>
+      <td class="py-3 px-4 font-mono"><code>bg-gray-800 text-white</code></td>
+      <td class="py-3 px-4">Memberi latar belakang berwarna abu gelap (<code>gray-800</code>) dan teks berwarna putih untuk menciptakan kontras yang jelas pada bagian footer.</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-mono"><code>flex justify-center space-x-6</code></td>
+      <td class="py-3 px-4">Menampilkan ikon sosial media secara sejajar menggunakan Flexbox, menengahkan posisinya, serta memberi jarak antar ikon sebesar <code>1.5rem</code>.</td>
+    </tr>
+    <tr>
+      <td class="py-3 px-4 font-mono"><code>hover:text-teal-400 transition</code></td>
+      <td class="py-3 px-4">Mengubah warna ikon menjadi teal saat diarahkan oleh kursor dengan efek transisi halus untuk interaksi yang lebih elegan.</td>
+    </tr>
+  </tbody>
+</table>
 
-                    <h2>Langkah 2: Finalisasi Kode JavaScript</h2>
-                    <p>Sekarang, mari kita gabungkan semua skrip yang telah kita tulis ke dalam satu tempat agar terorganisir. Ganti semua skrip Anda dengan kode di bawah ini. Ini adalah versi final yang mencakup semua fungsionalitas.</p>
+
+                    <h2 class="text-md font-bold my-10">Langkah 2: Struktur Akhir Kode JavaScript</h2>
+                    <p>Sekarang, pastikan kode JavaScript yang kamu punya strukturnya mirip seperti ini</p>
                     <pre class="language-javascript"><code>document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
 
@@ -131,6 +149,70 @@
     fetchProjects();
 });
 </code></pre>
+<h3 class="text-lg font-bold mt-6 mb-2 text-gray-800">Penjelasan Lengkap JavaScript:</h3>
+
+<table class="table-auto border-collapse border border-gray-300 w-full text-left text-sm md:text-base mb-8">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="border border-gray-300 px-4 py-2 w-1/3">Bagian Kode</th>
+      <th class="border border-gray-300 px-4 py-2">Penjelasan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>document.addEventListener('DOMContentLoaded', ...)</code></td>
+      <td class="border border-gray-300 px-4 py-2">Menjalankan seluruh skrip setelah halaman selesai dimuat. Ini mencegah error ketika elemen HTML belum siap.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>lucide.createIcons()</code></td>
+      <td class="border border-gray-300 px-4 py-2">Mengaktifkan ikon dari library <strong>Lucide</strong> agar bisa tampil di halaman. Wajib dipanggil ulang setelah manipulasi DOM.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>hamburgerBtn.addEventListener('click', ...)</code></td>
+      <td class="border border-gray-300 px-4 py-2">Menambahkan event klik pada tombol menu mobile. Ketika diklik, kelas <code>hidden</code> di-toggle untuk membuka/tutup navigasi.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>mobileNavLinks.forEach(link =&gt; {...})</code></td>
+      <td class="border border-gray-300 px-4 py-2">Menutup menu otomatis saat salah satu link navigasi diklik, menjaga pengalaman pengguna yang rapi di mode mobile.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>const typingElement = document.getElementById('typing-effect')</code></td>
+      <td class="border border-gray-300 px-4 py-2">Mengambil elemen teks untuk efek mengetik (typing effect). Efek ini berasal dari latihan di Hari 2.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>async function fetchProjects()</code></td>
+      <td class="border border-gray-300 px-4 py-2">Fungsi asynchronous untuk mengambil data proyek dari API. Menggunakan <code>await</code> agar penulisan kode lebih bersih dan mudah dibaca.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>await fetch(...)</code></td>
+      <td class="border border-gray-300 px-4 py-2">Mengirim request HTTP ke server. <code>await</code> akan menunggu hingga data diterima sebelum lanjut ke langkah berikutnya.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>await response.json()</code></td>
+      <td class="border border-gray-300 px-4 py-2">Mengonversi hasil dari API (berformat JSON) menjadi objek JavaScript agar bisa diolah.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>projectsContainer.innerHTML = ...</code></td>
+      <td class="border border-gray-300 px-4 py-2">Mengubah isi HTML dari container proyek. Awalnya menampilkan teks “Memuat...”, kemudian diganti dengan kartu proyek dinamis.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>forEach(project =&gt; ...)</code></td>
+      <td class="border border-gray-300 px-4 py-2">Melakukan iterasi pada data proyek dan membuat HTML untuk setiap item menggunakan <strong>Template Literal</strong>.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">Template Literal (<code>``</code>)</td>
+      <td class="border border-gray-300 px-4 py-2">Memungkinkan penulisan HTML multi-baris dan menyisipkan variabel dengan <code>${variable}</code>. Cara modern mengganti string concatenation.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>try...catch</code></td>
+      <td class="border border-gray-300 px-4 py-2">Menangani error jaringan atau server API. Jika gagal, menampilkan pesan error ramah pengguna dan log di konsol.</td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2"><code>console.error()</code></td>
+      <td class="border border-gray-300 px-4 py-2">Menampilkan detail error di konsol browser untuk debugging tanpa mengganggu pengguna.</td>
+    </tr>
+  </tbody>
+</table>
 
                     <div class="mt-8 p-6 rounded-lg border border-teal-500/30 bg-teal-500/10 backdrop-blur-sm">
                         <h2 class="!text-3xl font-bold mb-2 text-teal-800">🎉 Selamat! Anda Telah Menyelesaikan Websitenya! 🎉</h2>

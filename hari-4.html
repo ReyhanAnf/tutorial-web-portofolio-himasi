@@ -70,7 +70,7 @@
                     <h1 class="text-4xl font-extrabold text-gray-900">Hari 4: Membangun Formulir Kontak</h1>
                     <p class="text-lg text-gray-700">Setelah memperkenalkan diri, saatnya memberi kesempatan bagi pengunjung untuk menghubungi Anda. Hari ini kita akan membuat formulir kontak yang bersih dan modern.</p>
                     
-                    <h2>Langkah 1: Struktur HTML Formulir Kontak</h2>
+                    <h2 class="text-md font-bold my-10">Langkah 1: Struktur HTML Formulir Kontak</h2>
                     <p>Tambahkan kode berikut setelah penutup section "Tentang Saya". Kita akan membuat sebuah kartu di tengah halaman yang berisi input untuk nama, email, dan pesan.</p>
                     <pre class="language-html"><code>&lt;!-- Kontak Section --&gt;
 &lt;section id="contact" class="py-24 bg-gray-50/50"&gt;
@@ -100,14 +100,65 @@
 </code></pre>
 
                     <h3>Penjelasan Kelas Tailwind CSS:</h3>
-                    <ul>
-                        <li><strong><code>max-w-2xl mx-auto</code></strong>: Membatasi lebar maksimum form dan menengahkannya secara horizontal.</li>
-                        <li><strong><code>space-y-6</code></strong>: Memberi jarak vertikal antar elemen di dalam form.</li>
-                        <li><strong><code>relative</code></strong>: Digunakan pada div pembungkus input agar kita bisa memposisikan ikon secara absolut di dalamnya.</li>
-                        <li><strong><code>absolute left-4 top-1/2 -translate-y-1/2</code></strong>: Trik untuk menengahkan ikon secara vertikal di dalam input.</li>
-                        <li><strong><code>w-full p-4 pl-12</code></strong>: Mengatur input agar memenuhi lebar, memiliki padding, dan padding kiri yang lebih besar untuk memberi ruang bagi ikon.</li>
-                        <li><strong><code>focus:ring-2 focus:ring-teal-500</code></strong>: Memberikan efek "cincin" berwarna teal ketika input sedang aktif (di-klik/fokus), ini bagus untuk aksesibilitas.</li>
-                    </ul>
+<table class="table-auto border-collapse border border-gray-300 w-full text-left">
+  <thead class="bg-gray-100">
+    <tr>
+      <th class="border border-gray-300 px-4 py-2 w-1/3">Kelas Tailwind</th>
+      <th class="border border-gray-300 px-4 py-2">Fungsi / Deskripsi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">
+        <code>max-w-2xl mx-auto</code>
+      </td>
+      <td class="border border-gray-300 px-4 py-2">
+        Membatasi lebar maksimum form dan menengahkannya secara horizontal.
+      </td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">
+        <code>space-y-6</code>
+      </td>
+      <td class="border border-gray-300 px-4 py-2">
+        Memberi jarak vertikal antar elemen di dalam form.
+      </td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">
+        <code>relative</code>
+      </td>
+      <td class="border border-gray-300 px-4 py-2">
+        Digunakan pada <code>&lt;div&gt;</code> pembungkus input agar kita bisa memposisikan ikon secara absolut di dalamnya.
+      </td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">
+        <code>absolute left-4 top-1/2 -translate-y-1/2</code>
+      </td>
+      <td class="border border-gray-300 px-4 py-2">
+        Trik untuk menengahkan ikon secara vertikal di dalam input.
+      </td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">
+        <code>w-full p-4 pl-12</code>
+      </td>
+      <td class="border border-gray-300 px-4 py-2">
+        Mengatur input agar memenuhi lebar, memiliki padding, dan padding kiri yang lebih besar untuk memberi ruang bagi ikon.
+      </td>
+    </tr>
+    <tr>
+      <td class="border border-gray-300 px-4 py-2">
+        <code>focus:ring-2 focus:ring-teal-500</code>
+      </td>
+      <td class="border border-gray-300 px-4 py-2">
+        Memberikan efek "cincin" berwarna teal ketika input sedang aktif (di-klik/fokus), meningkatkan aksesibilitas visual.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
                     <p>Dengan struktur ini, formulir Anda tidak hanya fungsional tetapi juga memiliki tampilan yang sangat profesional dan modern.</p>
 
                 </article>
