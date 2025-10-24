@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagian Proyek Statis | Tutorial Koding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+    <!-- Muat library Animate on Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            background-image: linear-gradient(to bottom right, #ffffff, #e5e7eb, #d1d5db);
+            background-attachment: fixed;
+            scroll-behavior: smooth;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #e5e7eb; }
+        ::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+
+        /* Typography Improvements */
+        .prose { color: #374151; }
+        .prose h1, .prose h2, .prose h3, .prose strong { color: #111827; }
+        .prose p, .prose ul, .prose li, .prose blockquote { line-height: 1.75; }
+        .prose h2 { margin-top: 2.5em; margin-bottom: 1.25em; padding-bottom: 0.5em; border-bottom: 1px solid #e5e7eb; }
+        .prose a { color: #0d9488; text-decoration: none; font-weight: 500; }
+        .prose a:hover { color: #0f766e; text-decoration: underline; }
+        pre[class*="language-"] {
+            font-family: 'Fira Code', monospace;
+            position: relative;
+            overflow-x: auto;
+            border-radius: 0.75rem;
+            padding: 1.25rem 1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <button id="mobile-menu-btn" class="md:hidden fixed top-4 left-4 z-50 p-2 rounded-lg glass-panel shadow-md">
+        <i data-lucide="menu" class="w-6 h-6 text-gray-800"></i>
+    </button>
+
+    <div class="relative md:flex min-h-screen">
+        <aside id="sidebar" class="w-72 glass-panel p-6 flex-col fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 z-40 shadow-lg md:shadow-none flex-shrink-0">
+            <div class="flex items-center gap-4 mb-8">
+                <img src="https://placehold.co/64x64/00B894/FFF?text=HIMASI" alt="Logo Himasi" class="h-16 w-16 rounded-full">
+                <div>
+                    <h2 class="text-xl font-bold text-gray-900"><a href="index.html">Kelas Reguler</a></h2>
+                    <p class="text-sm text-gray-600">HIMASI UBSI</p>
+                </div>
+            </div>
+            <nav class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Overview</a>
+                <a href="hari-1.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 1: Struktur & Navbar</a>
+                <a href="hari-2.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 2: Hero Section</a>
+                <a href="hari-3.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 3: Tentang Saya</a>
+                <a href="hari-4.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 4: Formulir Kontak</a>
+                <!-- Menjadikan halaman ini aktif -->
+                <a href="hari-5-statis.html" class="font-bold text-teal-600 transition">Hari 5: Proyek Statis</a>
+                <a href="hari-5.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Dinamis (API)</a>
+                <a href="hari-6.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 6: Footer & Finalisasi</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 p-6 md:p-10 min-w-0">
+            <div class="glass-panel rounded-2xl p-6 md:p-8 shadow-md">
+                <article class="prose max-w-none">
+
+                    <section id="pendahuluan">
+                        <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Membangun Bagian Proyek (Statis)</h1>
+                        <p class="text-lg text-gray-600">Bagian proyek adalah etalase dari portofolio Anda. Di sinilah Anda memamerkan karya-karya terbaik Anda kepada pengunjung. Membuatnya terlihat profesional dan interaktif adalah kunci untuk menarik perhatian rekruter atau klien.</p>
+
+                        <blockquote class="border-l-4 border-teal-500 bg-teal-50 p-4 rounded-r-lg my-6">
+                            <h3 class="text-xl font-semibold text-teal-800 mt-0">Analogi Sederhana: Etalase Toko</h3>
+                            <p class="text-teal-900 mb-0">Anggap saja bagian ini sebagai etalase toko fisik Anda. Setiap kartu proyek adalah manekin yang Anda dandani dengan pakaian terbaik (desain) dan deskripsi yang jelas. Tujuannya adalah membuat orang yang lewat (pengunjung) berhenti, melihat, dan tertarik untuk masuk ke toko (melihat detail proyek).</p>
+                        </blockquote>
+                    </section>
+
+                    <section id="kode-lengkap">
+                        <h2 class="text-xl font-bold py-4">Kode HTML Lengkap Bagian Proyek</h2>
+                        <p>Berikut adalah kode HTML lengkap untuk seluruh bagian proyek. Kita menggunakan Tailwind CSS untuk styling dan Animate on Scroll (AOS) untuk animasi saat di-scroll. Pastikan Anda telah mengimpor library AOS di <code>&lt;head&gt;</code> untuk membuatnya berfungsi.</p>
+<pre class="language-html"><code>
+&lt;!-- ANIMASI --&gt;
+&lt;!-- Tambahkan link ini di tag &lt;head&gt; --&gt;
+&lt;link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"&gt;
+&lt;!-- ///////////// --&gt;
+&lt;!-- ANIMASI --&gt;
+
+&lt;section id="projects" class="py-24 bg-gray-50"&gt;
+  &lt;div class="container mx-auto px-6"&gt;
+    &lt;h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up"&gt;
+      Proyek Terbaru
+    &lt;/h3&gt;
+    &lt;div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10"&gt;
+
+      &lt;!-- Kartu 1 --&gt;
+      &lt;div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-left"&gt;
+        &lt;div class="relative"&gt;
+          &lt;img src="https://placehold.co/400x250/333/FFF?text=Proyek+1" alt="Gambar Proyek 1" class="w-full h-52 object-cover"&gt;
+          &lt;div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"&gt;
+            &lt;a href="#" class="text-white bg-[#00B894] px-4 py-2 rounded-full font-semibold"&gt;Lihat Detail&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="p-6"&gt;
+          &lt;h4 class="text-2xl font-bold mb-2"&gt;Sistem E-Learning&lt;/h4&gt;
+          &lt;p class="text-gray-600 mb-4"&gt;Platform belajar online interaktif dengan manajemen kursus dan pelacakan kemajuan siswa.&lt;/p&gt;
+          &lt;div class="flex flex-wrap gap-2"&gt;
+            &lt;span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full"&gt;Flutter&lt;/span&gt;
+            &lt;span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full"&gt;Laravel&lt;/span&gt;
+            &lt;span class="text-sm bg-orange-100 text-orange-700 px-3 py-1 rounded-full"&gt;MySQL&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Kartu 2 --&gt;
+      &lt;div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-up" data-aos-delay="200"&gt;
+        &lt;div class="relative"&gt;
+          &lt;img src="https://placehold.co/400x250/333/FFF?text=Proyek+1" alt="Gambar Proyek 1" class="w-full h-52 object-cover"&gt;
+          &lt;div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"&gt;
+            &lt;a href="#" class="text-white bg-[#00B894] px-4 py-2 rounded-full font-semibold"&gt;Lihat Detail&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="p-6"&gt;
+          &lt;h4 class="text-2xl font-bold mb-2"&gt;Aplikasi E-Perpustakaan&lt;/h4&gt;
+          &lt;p class="text-gray-600 mb-4"&gt;Aplikasi peminjaman buku perpustakaan melalui media elektronik &lt;/p&gt;
+          &lt;div class="flex flex-wrap gap-2"&gt;
+            &lt;span class="text-sm bg-blue-100 text-green-700 px-3 py-1 rounded-full"&gt;Vue.js&lt;/span&gt;
+            &lt;span class="text-sm bg-red-100 text-red-700 px-3 py-1 rounded-full"&gt;Laravel&lt;/span&gt;
+            &lt;span class="text-sm bg-orange-100 text-cyan-700 px-3 py-1 rounded-full"&gt;Tailwind&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Kartu 3 --&gt;
+      &lt;div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-right" data-aos-delay="400"&gt;
+        &lt;div class="relative"&gt;
+          &lt;img src="https://placehold.co/400x250/333/FFF?text=Proyek+1" alt="Gambar Proyek 1" class="w-full h-52 object-cover"&gt;
+          &lt;div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"&gt;
+            &lt;a href="#" class="text-white bg-[#00B894] px-4 py-2 rounded-full font-semibold"&gt;Lihat Detail&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="p-6"&gt;
+          &lt;h4 class="text-2xl font-bold mb-2"&gt;Desain UI/UX Mobile Banking&lt;/h4&gt;
+          &lt;p class="text-gray-600 mb-4"&gt;Prototipe desain antarmuka aplikasi mobile banking yang modern dan mudah digunakan.&lt;/p&gt;
+          &lt;div class="flex flex-wrap gap-2"&gt;
+            &lt;span class="text-sm bg-blue-100 text-red-700 px-3 py-1 rounded-full"&gt;Figma&lt;/span&gt;
+            &lt;span class="text-sm bg-orange-100 text-purple-700 px-3 py-1 rounded-full"&gt;Framer&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- ANIMASI --&gt;
+&lt;script src="https://unpkg.com/aos@2.3.1/dist/aos.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  AOS.init({
+    duration: 1000, // durasi animasi
+    once: true, // animasi hanya terjadi sekali
+  });
+&lt;/script&gt;
+&lt;!-- ANIMASI --&gt;
+</code></pre>
+                    </section>
+
+                    <section id="bedah-kode">
+                        <h2>Bedah Kode: Anatomi Kartu Proyek</h2>
+                        <p>Mari kita bedah satu per satu elemen penting dari sebuah kartu proyek untuk memahami cara kerjanya.</p>
+
+                        <h3 class="text-lg font-semibold my-10">Penjelasan Kode</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table-auto border-collapse border border-gray-300 w-full text-left">
+                              <thead class="bg-gray-100">
+                                <tr>
+                                  <th class="border border-gray-300 px-4 py-2 w-1/3">Kelas / Atribut</th>
+                                  <th class="border border-gray-300 px-4 py-2">Penjelasan Lengkap</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;section class="... bg-gray-50"&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Ini adalah pembungkus utama untuk seluruh bagian proyek. <code>py-24</code> memberi padding vertikal dan <code>bg-gray-50</code> memberi latar belakang abu-abu sangat muda.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10"&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Ini adalah kontainer grid yang menampung kartu-kartu.
+                                    <ul>
+                                        <li><code>grid</code>: Mengaktifkan CSS Grid.</li>
+                                        <li><code>md:grid-cols-2</code>: Di layar medium (tablet), tampilkan 2 kolom.</li>
+                                        <li><code>lg:grid-cols-3</code>: Di layar large (desktop), tampilkan 3 kolom.</li>
+                                        <li><code>gap-10</code>: Memberi jarak antar kartu.</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>data-aos="fade-up"</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Atribut dari library <strong>Animate on Scroll (AOS)</strong>. Ini membuat elemen (judul "Proyek Terbaru") muncul dengan efek "fade up" saat di-scroll ke area pandang.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>data-aos="flip-left"</code><br>
+                                    <code>data-aos-delay="200"</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Sama seperti di atas, tapi untuk kartu. <code>flip-left</code> memberikan animasi membalik. <code>data-aos-delay</code> memberikan jeda (dalam milidetik) sebelum animasi dimulai, menciptakan efek berurutan yang bagus.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;div class="... group"&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Ini adalah kontainer kartu. Kelas <code>group</code> sangat penting. Ini memberi tahu Tailwind bahwa elemen anak di dalamnya dapat bereaksi terhadap <strong>hover pada induk ini</strong>.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>hover:-translate-y-2 transition-transform duration-300</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Ini adalah efek "mengambang". Saat di-hover (<code>hover:</code>), kartu akan bergerak ke atas sedikit (<code>-translate-y-2</code>). Efek ini dibuat mulus (<code>transition-transform</code>) selama 300ms (<code>duration-300</code>).
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;div class="relative"&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Kontainer untuk gambar. Diberi <code>relative</code> agar kita bisa menempatkan elemen <code>absolute</code> (overlay) di atasnya.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;img class="... h-52 object-cover"&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Gambar proyek. <code>h-52</code> memberi tinggi tetap, dan <code>object-cover</code> memastikan gambar mengisi ruang tanpa merusak rasio aspek (mirip <code>background-size: cover</code>).
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;div class="absolute ... opacity-0 group-hover:opacity-100"&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Ini adalah <strong>kunci interaksi hover</strong>.
+                                    <ul>
+                                        <li><code>absolute inset-0</code>: Membuatnya menutupi induk <code>relative</code>-nya.</li>
+                                        <li><code>bg-black bg-opacity-40</code>: Latar hitam transparan.</li>
+                                        <li><code>opacity-0</code>: Awalnya tidak terlihat.</li>
+                                        <li><code>group-hover:opacity-100</code>: Ini bagian ajaibnya. Saat elemen <code>group</code> (induk kartu) di-hover, elemen ini akan muncul (<code>opacity-100</code>).</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    <code>&lt;span class="text-sm bg-blue-100 text-blue-700 ..."&gt;</code>
+                                  </td>
+                                  <td class="border border-gray-300 px-4 py-2">
+                                    Ini adalah "tag" atau "pil" teknologi. Kombinasi warna latar belakang terang (<code>bg-blue-100</code>) dan warna teks yang lebih gelap (<code>text-blue-700</code>) adalah pola umum untuk membuat tag yang mudah dibaca.
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                </article>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100,
+            });
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            mobileMenuBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('-translate-x-full');
+            });
+
+            function addCopyButtons() {
+                document.querySelectorAll('pre[class*="language-"]').forEach(block => {
+                    const button = document.createElement('button');
+                    button.className = 'absolute top-2.5 right-2.5 p-1.5 text-gray-300 hover:text-white bg-gray-700/50 rounded-md transition';
+                    button.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
+
+                    button.addEventListener('click', () => {
+                        const code = block.querySelector('code').innerText;
+
+                        try {
+                            navigator.clipboard.writeText(code).then(() => {
+                                button.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-green-400"></i>';
+                                lucide.createIcons({ nodes: [button] });
+                                setTimeout(() => {
+                                    button.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
+                                    lucide.createIcons({ nodes: [button] });
+                                }, 2000);
+                            }).catch(err => {
+                                throw err;
+                            });
+                        } catch (err) {
+                            const textArea = document.createElement('textarea');
+                            textArea.value = code;
+                            textArea.style.position = 'fixed';
+                            textArea.style.top = '0';
+                            textArea.style.left = '0';
+                            textArea.style.opacity = '0';
+                            document.body.appendChild(textArea);
+                            textArea.focus();
+                            textArea.select();
+                            try {
+                                document.execCommand('copy');
+                                button.innerHTML = '<i data-lucide="check" class="w-4 h-4 text-green-400"></i>';
+                                lucide.createIcons({ nodes: [button] });
+                                setTimeout(() => {
+                                    button.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
+                                    lucide.createIcons({ nodes: [button] });
+                                }, 2000);
+                            } catch (copyErr) {
+                                console.error('Fallback copy failed', copyErr);
+                            }
+                            document.body.removeChild(textArea);
+                        }
+                    });
+
+                    block.appendChild(button);
+                    lucide.createIcons({ nodes: [button] });
+                });
+            }
+            addCopyButtons();
+        });
+    </script>
+</body>
+</html>

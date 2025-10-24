@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <style>
-        body { 
+        body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
             background-image: linear-gradient(to bottom right, #ffffff, #e5e7eb, #d1d5db);
@@ -46,7 +46,7 @@
         <aside id="sidebar" class="w-72 glass-panel p-6 flex-col fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 z-40 shadow-lg md:shadow-none flex-shrink-0">
             <div class="flex items-center gap-4 mb-8">
                             <div class="flex items-center gap-4 mb-8">
-                <img src="./himasi.png" alt="Logo Komunitas" class="h-16 w-16 rounded-full">
+                <img src="./himasi.png" alt="Logo Himasi" class="h-16 w-16 rounded-full">
                 <div>
                     <h2 class="text-xl font-bold text-gray-900"><a href="index.html">Kelas Reguler</a></h2>
                     <p class="text-sm text-gray-600">HIMASI UBSI</p>
@@ -59,6 +59,7 @@
                 <a href="hari-2.html" class="font-bold text-teal-600 transition">Hari 2: Hero Section</a>
                 <a href="hari-3.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 3: Tentang Saya</a>
                 <a href="hari-4.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 4: Formulir Kontak</a>
+                <a href="hari-5-noapi.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Statis</a>
                 <a href="hari-5.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Dinamis (API)</a>
                 <a href="hari-6.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 6: Footer & Finalisasi</a>
             </nav>
@@ -203,7 +204,7 @@ function type() {
     roleIndex = (roleIndex + 1) % roles.length;
     typeSpeed = 500;
   }
-  
+
   setTimeout(type, typeSpeed);
 }
 
@@ -298,12 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         </main>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script>
         lucide.createIcons();
-      
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const sidebar = document.getElementById('sidebar');
         mobileMenuBtn.addEventListener('click', () => {
@@ -316,7 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const button = document.createElement('button');
                 button.className = 'absolute top-2 right-2 p-2 text-gray-300 hover:text-white bg-gray-700/50 rounded-md transition';
                 button.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
-                
+
                 button.addEventListener('click', () => {
                     const code = block.querySelector('code').innerText;
                     navigator.clipboard.writeText(code).then(() => {
@@ -328,15 +329,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         lucide.createIcons();
                     });
                 });
-                
+
                 block.appendChild(button);
             });
             lucide.createIcons();
         }
-        
+
         document.addEventListener('DOMContentLoaded', () => {
             addCopyButtons();
-            
+
             const typingElement = document.getElementById('typing-effect');
             if(typingElement) {
                 const roles = ["Web & Mobile Developer", "UI/UX Enthusiast", "Tech Explorer"];
@@ -370,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         roleIndex = (roleIndex + 1) % roles.length;
                         typeSpeed = 500;
                     }
-                    
+
                     setTimeout(type, typeSpeed);
                 }
                 type();

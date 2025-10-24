@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <style>
-        body { 
+        body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
             background-image: linear-gradient(to bottom right, #ffffff, #e5e7eb, #d1d5db);
@@ -25,7 +25,7 @@
         ::-webkit-scrollbar-track { background: #e5e7eb; }
         ::-webkit-scrollbar-thumb { background: #9ca3af; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
-        
+
         .prose { color: #374151; }
         .prose h1, .prose h2, .prose h3, .prose strong { color: #111827; }
         .prose a { color: #0d9488; }
@@ -48,7 +48,7 @@
         <aside id="sidebar" class="w-72 glass-panel p-6 flex-col fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 z-40 shadow-lg md:shadow-none">
             <div class="flex items-center gap-4 mb-8">
                             <div class="flex items-center gap-4 mb-8">
-                <img src="./himasi.png" alt="Logo Komunitas" class="h-16 w-16 rounded-full">
+                <img src="./himasi.png" alt="Logo Himasi" class="h-16 w-16 rounded-full">
                 <div>
                     <h2 class="text-xl font-bold text-gray-900"><a href="index.html">Kelas Reguler</a></h2>
                     <p class="text-sm text-gray-600">HIMASI UBSI</p>
@@ -61,6 +61,7 @@
                 <a href="hari-2.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 2: Hero Section</a>
                 <a href="hari-3.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 3: Tentang Saya</a>
                 <a href="hari-4.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 4: Formulir Kontak</a>
+                <a href="hari-5-noapi.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Statis</a>
                 <a href="hari-5.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Dinamis (API)</a>
                 <a href="hari-6.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 6: Footer & Finalisasi</a>
             </nav>
@@ -71,7 +72,7 @@
                 <article class="prose max-w-none">
                     <h1 class="text-4xl font-extrabold text-gray-900">Hari 1: Struktur Dasar & Navbar</h1>
                     <p class="text-lg text-gray-700">Selamat datang di hari pertama! Hari ini kita akan menyiapkan fondasi website kita. Kita akan membuat struktur dasar file HTML dan membangun sebuah navbar yang keren dan responsif.</p>
-                    
+
                     <h2 class="text-md font-bold my-10">Langkah 1: Struktur Dasar HTML</h2>
                     <p>Pertama, buat file baru bernama <code>index.html</code>. Kemudian, salin dan tempelkan kode di bawah ini. Ini adalah "kerangka" dari setiap halaman web.</p>
                     <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
@@ -158,7 +159,7 @@
   const navLinks = document.querySelectorAll('.nav-link');
   const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
   const sections = document.querySelectorAll('section');
-  
+
   // Toggle Menu Mobile
   hamburgerBtn.addEventListener('click', () => {
     const isHidden = mobileMenu.classList.contains('hidden');
@@ -221,12 +222,12 @@
             </div>
         </main>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script>
       lucide.createIcons();
-      
+
       // Sidebar Toggle
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const sidebar = document.getElementById('sidebar');
@@ -241,7 +242,7 @@
             const button = document.createElement('button');
             button.className = 'absolute top-2 right-2 p-2 text-gray-300 hover:text-white bg-gray-700/50 rounded-md transition';
             button.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
-            
+
             button.addEventListener('click', () => {
                 const code = block.querySelector('code').innerText;
                 navigator.clipboard.writeText(code).then(() => {
@@ -253,7 +254,7 @@
                     lucide.createIcons();
                 });
             });
-            
+
             block.appendChild(button);
         });
         lucide.createIcons();

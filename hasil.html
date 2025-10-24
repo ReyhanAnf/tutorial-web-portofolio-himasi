@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Interaktif | Ahmad Zaelani</title>
-    
-    <!-- Tailwind CSS -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- AOS (Animate on Scroll) -->
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    
-    <!-- Google Fonts: Inter -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,20 +16,16 @@
       rel="stylesheet"
     />
 
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-      /* Menggunakan font Inter sebagai default */
       body {
         font-family: "Inter", sans-serif;
       }
-      /* Style untuk active link di navbar */
       .nav-link.active {
         color: #00b894;
         font-weight: 600;
       }
-      /* Style untuk garis bawah pada judul section */
       .section-title::after {
         content: '';
         display: block;
@@ -45,12 +38,10 @@
     </style>
   </head>
   <body class="bg-gray-50 text-gray-800">
-    <!-- Navbar -->
     <nav id="navbar" class="fixed w-full top-0 bg-white/80 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
       <div class="container mx-auto flex justify-between items-center p-4">
         <a href="#home" class="text-3xl font-bold text-[#00B894]">Ahmad Z.</a>
-        
-        <!-- Menu untuk Desktop -->
+
         <ul id="desktop-menu" class="hidden md:flex items-center space-x-8 font-medium">
           <li><a href="#home" class="nav-link hover:text-[#00B894] transition">Home</a></li>
           <li><a href="#about" class="nav-link hover:text-[#00B894] transition">Tentang</a></li>
@@ -58,13 +49,11 @@
           <li><a href="#contact" class="nav-link hover:text-[#00B894] transition">Kontak</a></li>
         </ul>
 
-        <!-- Tombol Hamburger untuk Mobile -->
         <button id="hamburger-btn" class="md:hidden z-50">
           <i data-lucide="menu" class="w-7 h-7"></i>
         </button>
       </div>
 
-      <!-- Menu untuk Mobile -->
       <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-screen bg-white">
         <ul class="flex flex-col items-center justify-center h-full space-y-8 text-xl font-medium">
           <li><a href="#home" class="nav-link-mobile hover:text-[#00B894] transition">Home</a></li>
@@ -75,7 +64,6 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center bg-gradient-to-br from-[#00B894] to-green-300 text-white px-6 pt-24 md:pt-0">
       <div class="container mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
@@ -104,7 +92,6 @@
       </div>
     </section>
 
-    <!-- Tentang Saya Section -->
     <section id="about" class="py-24 bg-white">
       <div class="container mx-auto px-6">
         <h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up">
@@ -138,14 +125,12 @@
       </div>
     </section>
 
-    <!-- Proyek Section -->
     <section id="projects" class="py-24 bg-gray-50">
       <div class="container mx-auto px-6">
         <h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up">
           Proyek Terbaru
         </h3>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <!-- Kartu Proyek 1 -->
           <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-left">
             <div class="relative">
                 <img src="https://placehold.co/400x250/333/FFF?text=Proyek+1" alt="Gambar Proyek 1" class="w-full h-52 object-cover"/>
@@ -163,7 +148,6 @@
               </div>
             </div>
           </div>
-          <!-- Kartu Proyek 2 -->
           <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-up" data-aos-delay="200">
             <div class="relative">
                 <img src="https://placehold.co/400x250/555/FFF?text=Proyek+2" alt="Gambar Proyek 2" class="w-full h-52 object-cover"/>
@@ -181,7 +165,6 @@
               </div>
             </div>
           </div>
-          <!-- Kartu Proyek 3 -->
           <div class="bg-white rounded-2xl shadow-lg overflow-hidden group transform hover:-translate-y-2 transition-transform duration-300" data-aos="flip-right" data-aos-delay="400">
             <div class="relative">
                 <img src="https://placehold.co/400x250/777/FFF?text=Proyek+3" alt="Gambar Proyek 3" class="w-full h-52 object-cover"/>
@@ -202,7 +185,6 @@
       </div>
     </section>
 
-    <!-- Kontak Section -->
     <section id="contact" class="py-24 bg-white">
       <div class="container mx-auto px-6">
         <h3 class="section-title text-4xl font-bold text-center mb-16" data-aos="fade-up">
@@ -230,7 +212,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
       <div class="container mx-auto py-10 px-6 text-center">
         <div class="flex justify-center space-x-6 mb-6">
@@ -242,21 +223,16 @@
       </div>
     </footer>
 
-    <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Custom JavaScript -->
+
     <script>
-      // Inisialisasi AOS
       AOS.init({
         duration: 800,
         once: true,
       });
 
-      // Inisialisasi Lucide Icons
       lucide.createIcons();
-      
-      // -- Efek Mengetik --
+
       const typingElement = document.getElementById('typing-effect');
       const roles = ["Web & Mobile Developer", "UI/UX Enthusiast", "Tech Explorer"];
       let roleIndex = 0;
@@ -276,7 +252,7 @@
         }
 
         typingElement.textContent = displayText;
-        typingElement.style.borderRight = '3px solid #FFD700'; // Cursor
+        typingElement.style.borderRight = '3px solid #FFD700';
 
         let typeSpeed = 200;
         if (isDeleting) {
@@ -284,26 +260,24 @@
         }
 
         if (!isDeleting && charIndex === currentRole.length) {
-          typeSpeed = 2000; // Jeda setelah selesai mengetik
+          typeSpeed = 2000;
           isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
           isDeleting = false;
           roleIndex = (roleIndex + 1) % roles.length;
-          typeSpeed = 500; // Jeda sebelum mulai mengetik kata baru
+          typeSpeed = 500;
         }
-        
+
         setTimeout(type, typeSpeed);
       }
 
-      // -- Navbar & Menu Mobile --
       const navbar = document.getElementById('navbar');
       const hamburgerBtn = document.getElementById('hamburger-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       const navLinks = document.querySelectorAll('.nav-link');
       const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
       const sections = document.querySelectorAll('section');
-      
-      // Toggle Menu Mobile
+
       hamburgerBtn.addEventListener('click', () => {
         const isHidden = mobileMenu.classList.contains('hidden');
         if(isHidden) {
@@ -313,10 +287,9 @@
           mobileMenu.classList.add('hidden');
           hamburgerBtn.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
         }
-        lucide.createIcons(); // Re-render icon
+        lucide.createIcons();
       });
 
-      // Tutup menu saat link di-klik (untuk mobile)
       mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
           mobileMenu.classList.add('hidden');
@@ -325,7 +298,6 @@
         });
       });
 
-      // Efek shadow pada navbar saat scroll
       window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
           navbar.classList.add('shadow-md');
@@ -335,7 +307,6 @@
           navbar.classList.add('shadow-sm');
         }
 
-        // Active link highlighting on scroll
         let current = '';
         sections.forEach(section => {
           const sectionTop = section.offsetTop;
@@ -351,7 +322,7 @@
           }
         });
       });
-      
+
       document.addEventListener('DOMContentLoaded', () => {
         type();
       });

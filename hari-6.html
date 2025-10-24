@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <style>
-        body { 
+        body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
             background-image: linear-gradient(to bottom right, #ffffff, #e5e7eb, #d1d5db);
@@ -45,7 +45,7 @@
     <div class="relative md:flex min-h-screen">
         <aside id="sidebar" class="w-72 glass-panel p-6 flex-col fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-300 z-40 shadow-lg md:shadow-none flex-shrink-0">
             <div class="flex items-center gap-4 mb-8">
-                <img src="./himasi.png" alt="Logo Komunitas" class="h-16 w-16 rounded-full">
+                <img src="./himasi.png" alt="Logo Himasi" class="h-16 w-16 rounded-full">
                 <div>
                     <h2 class="text-xl font-bold text-gray-900"><a href="index.html">Kelas Reguler</a></h2>
                     <p class="text-sm text-gray-600">HIMASI UBSI</p>
@@ -57,6 +57,7 @@
                 <a href="hari-2.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 2: Hero Section</a>
                 <a href="hari-3.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 3: Tentang Saya</a>
                 <a href="hari-4.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 4: Formulir Kontak</a>
+                <a href="hari-5-noapi.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Statis</a>
                 <a href="hari-5.html" class="text-gray-600 hover:text-gray-900 hover:font-semibold transition">Hari 5: Proyek Dinamis (API)</a>
                 <a href="hari-6.html" class="font-bold text-teal-600 transition">Hari 6: Footer & Finalisasi</a>
             </nav>
@@ -67,7 +68,7 @@
                 <article class="prose max-w-none">
                     <h1 class="text-4xl font-extrabold text-gray-900">Hari 6: Sentuhan Akhir dengan Footer & JavaScript</h1>
                     <p class="text-lg text-gray-700">Selamat datang di hari terakhir! Kita akan menyelesaikan website kita dengan menambahkan footer, ikon sosial media, dan menggabungkan semua fungsi JavaScript yang diperlukan untuk interaktivitas.</p>
-                    
+
                     <h2 class="text-md font-bold my-10">Langkah 1: Membuat Footer</h2>
                     <p>Footer adalah bagian paling bawah dari website, biasanya berisi info hak cipta dan link sosial media. Tambahkan kode ini sebelum tag penutup <code>&lt;/body&gt;</code>.</p>
                     <pre class="language-html"><code>&lt;!-- Footer --&gt;
@@ -106,114 +107,6 @@
   </tbody>
 </table>
 
-
-                    <h2 class="text-md font-bold my-10">Langkah 2: Struktur Akhir Kode JavaScript</h2>
-                    <p>Sekarang, pastikan kode JavaScript yang kamu punya strukturnya mirip seperti ini</p>
-                    <pre class="language-javascript"><code>document.addEventListener('DOMContentLoaded', () => {
-    lucide.createIcons();
-
-    // -- Toggle Menu Mobile Navbar --
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mobileNavLinks = document.querySelectorAll('.nav-link-mobile');
-
-    if(hamburgerBtn) {
-        hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = mobileMenu.classList.contains('hidden') ? 'menu' : 'x';
-            hamburgerBtn.innerHTML = `&lt;i data-lucide="${icon}" class="w-7 h-7"&gt;&lt;/i&gt;`;
-            lucide.createIcons();
-        });
-
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                hamburgerBtn.innerHTML = `&lt;i data-lucide="menu" class="w-7 h-7"&gt;&lt;/i&gt;`;
-                lucide.createIcons();
-            });
-        });
-    }
-
-    // -- Efek Mengetik --
-    const typingElement = document.getElementById('typing-effect');
-    if (typingElement) {
-        // ... (Kode lengkap dari Hari 2)
-    }
-
-    // -- Ambil Data Proyek dari API --
-    async function fetchProjects() {
-        const projectsContainer = document.getElementById('projects-container');
-        if (!projectsContainer) return;
-        // ... (Kode lengkap dari Hari 5)
-    }
-    fetchProjects();
-});
-</code></pre>
-<h3 class="text-lg font-bold mt-6 mb-2 text-gray-800">Penjelasan Lengkap JavaScript:</h3>
-
-<table class="table-auto border-collapse border border-gray-300 w-full text-left text-sm md:text-base mb-8">
-  <thead class="bg-gray-100">
-    <tr>
-      <th class="border border-gray-300 px-4 py-2 w-1/3">Bagian Kode</th>
-      <th class="border border-gray-300 px-4 py-2">Penjelasan</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>document.addEventListener('DOMContentLoaded', ...)</code></td>
-      <td class="border border-gray-300 px-4 py-2">Menjalankan seluruh skrip setelah halaman selesai dimuat. Ini mencegah error ketika elemen HTML belum siap.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>lucide.createIcons()</code></td>
-      <td class="border border-gray-300 px-4 py-2">Mengaktifkan ikon dari library <strong>Lucide</strong> agar bisa tampil di halaman. Wajib dipanggil ulang setelah manipulasi DOM.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>hamburgerBtn.addEventListener('click', ...)</code></td>
-      <td class="border border-gray-300 px-4 py-2">Menambahkan event klik pada tombol menu mobile. Ketika diklik, kelas <code>hidden</code> di-toggle untuk membuka/tutup navigasi.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>mobileNavLinks.forEach(link =&gt; {...})</code></td>
-      <td class="border border-gray-300 px-4 py-2">Menutup menu otomatis saat salah satu link navigasi diklik, menjaga pengalaman pengguna yang rapi di mode mobile.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>const typingElement = document.getElementById('typing-effect')</code></td>
-      <td class="border border-gray-300 px-4 py-2">Mengambil elemen teks untuk efek mengetik (typing effect). Efek ini berasal dari latihan di Hari 2.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>async function fetchProjects()</code></td>
-      <td class="border border-gray-300 px-4 py-2">Fungsi asynchronous untuk mengambil data proyek dari API. Menggunakan <code>await</code> agar penulisan kode lebih bersih dan mudah dibaca.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>await fetch(...)</code></td>
-      <td class="border border-gray-300 px-4 py-2">Mengirim request HTTP ke server. <code>await</code> akan menunggu hingga data diterima sebelum lanjut ke langkah berikutnya.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>await response.json()</code></td>
-      <td class="border border-gray-300 px-4 py-2">Mengonversi hasil dari API (berformat JSON) menjadi objek JavaScript agar bisa diolah.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>projectsContainer.innerHTML = ...</code></td>
-      <td class="border border-gray-300 px-4 py-2">Mengubah isi HTML dari container proyek. Awalnya menampilkan teks “Memuat...”, kemudian diganti dengan kartu proyek dinamis.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>forEach(project =&gt; ...)</code></td>
-      <td class="border border-gray-300 px-4 py-2">Melakukan iterasi pada data proyek dan membuat HTML untuk setiap item menggunakan <strong>Template Literal</strong>.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2">Template Literal (<code>``</code>)</td>
-      <td class="border border-gray-300 px-4 py-2">Memungkinkan penulisan HTML multi-baris dan menyisipkan variabel dengan <code>${variable}</code>. Cara modern mengganti string concatenation.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>try...catch</code></td>
-      <td class="border border-gray-300 px-4 py-2">Menangani error jaringan atau server API. Jika gagal, menampilkan pesan error ramah pengguna dan log di konsol.</td>
-    </tr>
-    <tr>
-      <td class="border border-gray-300 px-4 py-2"><code>console.error()</code></td>
-      <td class="border border-gray-300 px-4 py-2">Menampilkan detail error di konsol browser untuk debugging tanpa mengganggu pengguna.</td>
-    </tr>
-  </tbody>
-</table>
-
                     <div class="mt-8 p-6 rounded-lg border border-teal-500/30 bg-teal-500/10 backdrop-blur-sm">
                         <h2 class="!text-3xl font-bold mb-2 text-teal-800">🎉 Selamat! Anda Telah Menyelesaikan Websitenya! 🎉</h2>
                         <p class="text-lg text-teal-700">Anda telah berhasil membangun sebuah website portofolio yang lengkap, dinamis, dan interaktif dari nol. Anda telah belajar tentang struktur HTML, styling dengan Tailwind CSS, mengambil data dari API, dan menambahkan interaktivitas dengan JavaScript. Ini adalah pencapaian yang luar biasa. Teruslah berlatih dan jangan pernah berhenti belajar!</p>
@@ -222,12 +115,12 @@
             </div>
         </main>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script>
       lucide.createIcons();
-      
+
       // Sidebar Toggle
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const sidebar = document.getElementById('sidebar');
@@ -242,7 +135,7 @@
             const button = document.createElement('button');
             button.className = 'absolute top-2 right-2 p-2 text-gray-300 hover:text-white bg-gray-700/50 rounded-md transition';
             button.innerHTML = '<i data-lucide="copy" class="w-4 h-4"></i>';
-            
+
             button.addEventListener('click', () => {
                 const code = block.querySelector('code').innerText;
                 navigator.clipboard.writeText(code).then(() => {
@@ -254,7 +147,7 @@
                     lucide.createIcons();
                 });
             });
-            
+
             block.appendChild(button);
         });
         lucide.createIcons();
